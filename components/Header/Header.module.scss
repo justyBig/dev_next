@@ -1,0 +1,183 @@
+@import 'main.scss';
+/********************************
+	HEADER
+********************************/
+.header {
+    background-color: $green;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    .header__item {
+        transition: width 0.4s;
+    }
+    //   logo
+    .header__logo {
+        flex: 1;
+        margin-left: 25px;
+        @media screen and (min-width: #{$tablet-min}) {
+            flex: 0;
+        }
+        .imgLogo {
+            height: 46px;
+        }
+    } // close: .header__logo
+
+    // NAV MENU
+    .header__nav {
+        color: $white;
+        position: fixed;
+        left: -100%;
+        top: 0;
+        height: 100vh;
+        background: $white;
+        z-index: $z_default;
+        @media screen and (min-width: #{$tablet-min}) {
+            transform: none;
+            color: $white;
+            position: relative;
+            left: 0;
+            top: 0;
+            width: auto;
+            height: auto;
+            background: $green;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+        &.show {
+            left: 0;
+            overflow: hidden;
+            width: 317px;
+            padding: 15px 11px;
+            .closeBtn {
+                border: 1px solid $black;
+                border-radius: 50%;
+                height: 28px;
+                width: 28px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: auto;
+                &::before {
+                    content: url('/icons/Vector.png');
+                }
+            }
+        }
+        .navList {
+            list-style: none;
+        }
+        .mobile {
+            display: block;
+            color: $black;
+            .hasSub {
+                position: relative;
+                margin-right: 11px;
+                font-weight: 100;
+                &:after {
+                    content: url('/icons/angleUp.png');
+                    height: 7px;
+                    width: 13px;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+                li {
+                    display: none;
+                }
+            }
+            @media screen and (min-width: #{$tablet-min}) {
+                display: none;
+            }
+        }
+        .desktop {
+            display: none;
+            @media screen and (min-width: #{$tablet-min}) {
+                display: flex;
+                padding: 0;
+                li {
+                    padding: 0 30px;
+                    margin: 0 30px;
+                    font-family: $font-lato;
+                }
+            }
+        }
+    } // close: .header__menu
+
+    // ICONS
+    .header__icons {
+        display: flex;
+        .header {
+            &__search {
+            }
+            &__account {
+                margin: 0 17px;
+            }
+            &__cart {
+            }
+        }
+    } // close: .header__icons
+
+    // DROPDOWNS
+    .header__dropdowns {
+        position: absolute;
+        top: $header_height;
+        width: 100%;
+
+        .header__dropdown {
+            position: absolute;
+            display: inline-block;
+            padding: 10px;
+            background-color: $white;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transform: translate3d(0, -100%, 0);
+            z-index: $z_below;
+            transition: all 0.4s;
+        }
+
+        // Search
+        .header__dropdown--search {
+        }
+    } // close: .header__dropdowns
+} // close: header.header
+
+/*** MOBILE MENU ***/
+// Styles for when mobile menu is open
+body.active--mobileMenu {
+    header.header {
+        .header__nav {
+            transform: translate3d(0, 0, 0);
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+        }
+    }
+}
+
+// .menu {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     height: 100vh;
+//     text-align: left;
+//     padding: 2rem;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     transition: transform 0.3s ease-in-out;
+//     width: 100%;
+
+//     a {
+//         // font-size: 2rem;
+//         text-transform: uppercase;
+//         padding: 2rem 0;
+//         font-weight: bold;
+//         letter-spacing: 0.5rem;
+//         text-decoration: none;
+//         transition: color 0.3s linear;
+//         font-size: 1.5rem;
+//         // text-align: center;
+//     }
+// }

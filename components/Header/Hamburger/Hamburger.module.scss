@@ -1,0 +1,30 @@
+@import 'main.scss';
+.hamburger {
+    height: 28px;
+    width: 28px;
+    border: solid 2px $white;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    .topBun {
+        height: 2px;
+        width: 15px;
+        background: $white;
+    }
+    .patty {
+        height: 2px;
+        width: 17px;
+        background: $white;
+        margin: 3px 0;
+    }
+    .botBun {
+        height: 2px;
+        width: 15px;
+        background: $white;
+    }
+    @media screen and (min-width: #{$tablet-min}) {
+        display: none;
+    }
+}

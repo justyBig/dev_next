@@ -1,0 +1,10 @@
+@import 'main.scss';
+.slideWrapper {
+    .slide {
+        position: relative;
+        @include responsive-bg-image(375, 227);
+        .slideContent {
+            position: relative;
+        }
+    }
+}
