@@ -17,7 +17,7 @@ const Hero = () => {
                     <div
                         className={clsx(styles.slide)}
                         style={{
-                            backgroundImage: 'url(' + './slide1.png' + ')',
+                            backgroundImage: 'url(' + './firstslide.png' + ')',
                             backgroundPosition: 'center',
                             backgroundSize: 'cover',
                             backgroundRepeat: 'no-repeat',
