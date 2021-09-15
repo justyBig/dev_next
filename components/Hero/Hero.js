@@ -24,9 +24,9 @@ const Hero = () => {
                         }}
                     ></div>
                     <div className={clsx(styles.slideContent)}>
-                        <h2>Shop New Arrivals</h2>
-                        <p>Our Coolest new items are waiting for you!</p>
-                        <a className="button">Shop now</a>
+                        <h2>{'Shop New Arrivals'}</h2>
+                        <p>{'Our Coolest new items are waiting for you!'}</p>
+                        <a className="button">{'Shop now'}</a>
                     </div>
                 </div>
                 <div className={clsx(styles.slideWrapper)}>
@@ -40,9 +40,9 @@ const Hero = () => {
                         }}
                     ></div>
                     <div className={clsx(styles.slideContent)}>
-                        <h2>Shop New Arrivals</h2>
-                        <p>Our Coolest new items are waiting for you!</p>
-                        <a className="button">Shop now</a>
+                        <h2>{'Shop New Arrivals'}</h2>
+                        <p>{'Our Coolest new items are waiting for you!'}</p>
+                        <a className="button">{'Shop now'}</a>
                     </div>
                 </div>
                 <div className={clsx(styles.slideWrapper)}>
@@ -56,9 +56,9 @@ const Hero = () => {
                         }}
                     ></div>
                     <div className={clsx(styles.slideContent)}>
-                        <h2>Shop New Arrivals</h2>
-                        <p>Our Coolest new items are waiting for you!</p>
-                        <a className="button">Shop now</a>
+                        <h2>{'Shop New Arrivals'}</h2>
+                        <p>{'Our Coolest new items are waiting for you!'}</p>
+                        <a className="button">{'Shop now'}</a>
                     </div>
                 </div>
             </Slider>
