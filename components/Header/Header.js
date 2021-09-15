@@ -29,26 +29,26 @@ const Menu = ({ mobileClick, mobileOpenProp }) => {
                 <nav>
                     <ul className={clsx(styles.mobile, styles.navList)}>
                         <li className={styles.hasSub}>
-                            TOPS
+                            {'TOPS'}
                             <ul>
-                                <li>T-Shirts</li>
-                                <li>Short Sleeve</li>
-                                <li>Long Sleeve</li>
+                                <li>{'T-Shirts'}</li>
+                                <li>{'Short Sleeve'}</li>
+                                <li>{'Long Sleeve'}</li>
                             </ul>
                         </li>
                         <li className={styles.hasSub}>
-                            BOTTOMS
+                            {'BOTTOMS'}
                             <ul>
-                                <li>Shorts</li>
-                                <li>Pants</li>
+                                <li>{'Shorts'}</li>
+                                <li>{'Pants'}</li>
                             </ul>
                         </li>
                     </ul>
                     <ul className={clsx(styles.desktop, styles.navList)}>
-                        <li>MEN'S</li>
-                        <li>WOMENS</li>
-                        <li>ACCESSORIES</li>
-                        <li>SALE!</li>
+                        <li>{"MEN'S"}</li>
+                        <li>{'WOMENS'}</li>
+                        <li>{'ACCESSORIES'}</li>
+                        <li>{'SALE!'}</li>
                     </ul>
                 </nav>
             </div>
