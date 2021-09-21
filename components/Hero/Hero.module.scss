@@ -1,10 +1,36 @@
 @import 'main.scss';
-.slideWrapper {
-    .slide {
-        position: relative;
-        @include responsive-bg-image(375, 227);
-        .slideContent {
-            position: relative;
+.shopBtn {
+    padding: 13px 19px;
+    margin: 0;
+    @media screen and (min-width: #{$mobile-min}) {
+        min-width: 129px;
+    }
+}
+.slickDots {
+    bottom: 195px;
+    @media screen and (min-width: #{$mobile-min}) {
+        bottom: 0;
+    }
+    li {
+        button {
+            &:before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 8px;
+                height: 8px;
+                content: '';
+                border-radius: 50%;
+                background-color: $white;
+                opacity: 0.6;
+            }
+        }
+        &.slick-active {
+            button {
+                &:before {
+                    opacity: 1;
+                }
+            }
         }
     }
 }

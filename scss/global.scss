@@ -16,6 +16,25 @@ body {
         z-index: $z_default;
     }
 }
-.h1 {
+
+.container {
+    @include container();
+}
+p {
+    font-size: 14px;
+    @media screen and (min-width: #{$mobile-min}) {
+        font-size: 26px;
+    }
+}
+.h2 {
+    font-size: 26px;
+    @media screen and (min-width: #{$mobile-min}) {
+        font-size: 60px;
+    }
+}
+.h1,
+.h2,
+h1,
+h2 {
     font-family: pacifico;
 }

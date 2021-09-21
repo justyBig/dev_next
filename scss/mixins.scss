@@ -4,3 +4,46 @@
     padding-bottom: percentage($image-height / $image-width);
     display: block;
 }
+@mixin container() {
+    position: relative;
+    margin: 0 auto;
+    max-width: $container_mobile;
+    padding: 0 $site_container_padding_mobile;
+
+    @media (min-width: $mobile-min) {
+        max-width: $container;
+        padding: 0 $site_container_padding;
+    }
+}
+
+@mixin input-placeholder($color) {
+    &::-webkit-input-placeholder {
+        color: $color;
+        opacity: 1;
+    }
+    &:-moz-placeholder {
+        color: $color;
+        opacity: 1;
+    }
+    &::-moz-placeholder {
+        color: $color;
+        opacity: 1;
+    }
+    &:-ms-input-placeholder {
+        color: $color;
+        opacity: 1;
+    }
+    // clear placeholder on focus
+    &:focus::-webkit-input-placeholder {
+        color: transparent;
+    }
+    &:focus:-moz-placeholder {
+        color: transparent;
+    } /* FF 4-18 */
+    &:focus::-moz-placeholder {
+        color: transparent;
+    } /* FF 19+ */
+    &:focus:-ms-input-placeholder {
+        color: transparent;
+    } /* IE 10+ */
+}

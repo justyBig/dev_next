@@ -1,0 +1,15 @@
+@import 'main.scss';
+.cardDeck {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .card {
+        flex: 1 1 33%;
+        &:last-child {
+            flex: 1 1 100%;
+            @media screen and (min-width: #{$mobile-min}) {
+                flex: 1 1 33%;
+            }
+        }
+    }
+}

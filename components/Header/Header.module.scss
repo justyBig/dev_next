@@ -3,11 +3,31 @@
 	HEADER
 ********************************/
 .header {
+    position: relative;
     background-color: $green;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 20px;
+    padding: 66px 20px 20px 20px;
+    @media screen and (min-width: #{$tablet-min}) {
+        padding: 86px 20px 28px 20px;
+    }
+    .alertBanner {
+        background: $black;
+        color: $white;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        font-weight: $semibold;
+        font-size: 14px;
+        padding: 14px 0;
+        @media screen and (min-width: #{$tablet-min}) {
+            padding: 20px 0;
+        }
+    }
     .header__item {
         transition: width 0.4s;
     }
@@ -19,7 +39,10 @@
             flex: 0;
         }
         .imgLogo {
-            height: 46px;
+            width: 46px;
+            @media screen and (min-width: #{$tablet-min}) {
+                width: 93px;
+            }
         }
     } // close: .header__logo
 
@@ -66,14 +89,21 @@
         }
         .navList {
             list-style: none;
+            a {
+                text-decoration: none;
+                color: $black;
+                @media screen and (min-width: #{$tablet-min}) {
+                    color: $white;
+                }
+            }
         }
         .mobile {
             display: block;
             color: $black;
+            padding-left: 24px;
             .hasSub {
                 position: relative;
                 margin-right: 11px;
-                font-weight: 100;
                 &:after {
                     content: url('/icons/angleUp.png');
                     height: 7px;
@@ -82,12 +112,32 @@
                     right: 0;
                     top: 0;
                 }
-                li {
+                &.subMenuActive {
+                    font-weight: 100;
+                    ul {
+                        padding-top: 25px;
+                        display: block;
+                    }
+                }
+
+                ul {
                     display: none;
+                    padding: 0 0 0 0;
+                    list-style: none;
+                    li {
+                        &:last-child {
+                            padding: 0;
+                        }
+                    }
                 }
             }
+
             @media screen and (min-width: #{$tablet-min}) {
                 display: none;
+            }
+            li {
+                padding-bottom: 25px;
+                font-weight: bold;
             }
         }
         .desktop {
@@ -107,8 +157,15 @@
     // ICONS
     .header__icons {
         display: flex;
+        align-items: center;
         .header {
             &__search {
+                .searchIconHide {
+                    display: block;
+                    @media screen and (min-width: #{$large-min}) {
+                        display: none;
+                    }
+                }
             }
             &__account {
                 margin: 0 17px;
@@ -117,30 +174,47 @@
             }
         }
     } // close: .header__icons
-
-    // DROPDOWNS
-    .header__dropdowns {
+    .searchForm {
+        display: none;
         position: absolute;
-        top: $header_height;
-        width: 100%;
-
-        .header__dropdown {
-            position: absolute;
-            display: inline-block;
-            padding: 10px;
-            background-color: $white;
-            opacity: 0;
-            visibility: hidden;
-            pointer-events: none;
-            transform: translate3d(0, -100%, 0);
-            z-index: $z_below;
-            transition: all 0.4s;
+        top: 100%;
+        z-index: 1;
+        padding: 5px;
+        background-color: $white;
+        &.open {
+            display: block;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 85%;
+            form {
+                display: flex;
+                input {
+                    @include input-placeholder('light-gray');
+                    border: solid 2px $black;
+                    border-right: none;
+                    border-radius: 0;
+                    width: 100%;
+                    padding: 9px;
+                }
+                [type='submit'] {
+                    color: $white;
+                    background: $black;
+                    border: 2px solid $black;
+                    padding: 0 13px;
+                }
+            }
+            @media screen and (min-width: #{$large-min}) {
+                position: relative;
+                z-index: 1;
+                padding: 0;
+                background-color: $white;
+                left: 0;
+                top: 0;
+                transform: none;
+                width: 280px;
+            }
         }
-
-        // Search
-        .header__dropdown--search {
-        }
-    } // close: .header__dropdowns
+    }
 } // close: header.header
 
 /*** MOBILE MENU ***/

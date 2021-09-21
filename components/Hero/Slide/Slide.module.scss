@@ -1,0 +1,40 @@
+@import 'main.scss';
+.slideWrapper {
+    position: relative;
+    .slide {
+        @include responsive-bg-image(375, 227);
+        position: relative;
+        background-position: top right;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .slideContent {
+        padding: 22px 0;
+        position: relative;
+        background-color: $gray-green;
+        color: $green;
+        @media screen and (min-width: #{$mobile-min}) {
+            color: $white;
+            position: absolute;
+            top: 208px;
+            left: 133px;
+            background: transparent;
+            text-align: left;
+        }
+        text-align: center;
+        .h2 {
+            margin: 0;
+            font-weight: 400;
+        }
+        &.green {
+            color: $green;
+        }
+        .shopBtn {
+            padding: 13px 19px;
+            margin: 0;
+            @media screen and (min-width: #{$mobile-min}) {
+                padding: 13px 22px;
+            }
+        }
+    }
+}
