@@ -10,7 +10,7 @@ const Card = ({ image, label }) => (
             style={{ backgroundImage: 'url(' + image + ')' }}
         ></div>
         <div className={clsx(styles.label)}>
-            <h2 class={clsx('h2')}>{label}</h2>
+            <h2 className={clsx('h2')}>{label}</h2>
         </div>
     </div>
 );

@@ -25,6 +25,10 @@
         .h2 {
             margin: 0 0 10px 0;
             font-weight: 400;
+            color: $green;
+            @media screen and (min-width: #{$mobile-min}) {
+                color: $white;
+            }
         }
         &.green {
             color: $green;
