@@ -7,8 +7,8 @@ const Button = ({ btnType, btnText, styleName = '', link }) => {
             className={clsx(
                 styleName,
                 { [styles.btnBlack]: btnType === 'black' },
-                { [styles.btnBlack]: btnType === 'green' },
-                { [styles.btnBlack]: btnType === 'outline' }
+                { [styles.btnGreen]: btnType === 'green' },
+                { [styles.btnOutline]: btnType === 'outline' }
             )}
             href={link}
         >

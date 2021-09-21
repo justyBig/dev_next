@@ -1,1 +1,66 @@
 @import 'main.scss';
+.signup {
+    text-align: center;
+    padding: 10px 0;
+    @media screen and (min-width: #{$mobile-min}) {
+        padding: 64px 0;
+    }
+    .sectionTitle {
+        margin: 10px 0 20px 0;
+        @media screen and (min-width: #{$mobile-min}) {
+            margin: 10px 0 40px 0;
+        }
+        svg {
+            height: 19px;
+            margin-right: 5px;
+            @media screen and (min-width: #{$mobile-min}) {
+                height: 36px;
+                margin-right: 6px;
+            }
+        }
+    }
+    .signupContent {
+        @media screen and (min-width: #{$tablet-min}) {
+            display: flex;
+            flex-flow: row;
+            text-align: left;
+            align-items: center;
+        }
+        .content {
+            @media screen and (min-width: #{$tablet-min}) {
+                flex: 0 1 50%;
+                margin-right: 40px;
+            }
+        }
+        .emailSignup {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            margin-top: 40px;
+            @media screen and (min-width: #{$tablet-min}) {
+                flex-flow: row;
+                flex: 0 0 643px;
+                margin-top: 0;
+                .content {
+                    font-size: 14px;
+                }
+            }
+            input {
+                height: 34px;
+                width: 80%;
+                @media screen and (min-width: #{$tablet-min}) {
+                    height: 46px;
+                }
+            }
+            .subscribeBtn {
+                width: 148px;
+                margin-bottom: 10px;
+                @media screen and (min-width: #{$tablet-min}) {
+                    margin: 0 0 0 13px;
+                    width: 140px;
+                    padding: 19px;
+                }
+            }
+        }
+    }
+}

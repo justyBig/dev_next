@@ -16,18 +16,41 @@ body {
         z-index: $z_default;
     }
 }
-
+.bg-green {
+    background: $green;
+    color: $white;
+}
+.bg-black {
+    background: $black;
+    color: $white;
+}
 .container {
     @include container();
 }
 p {
     font-size: 14px;
+    margin: 0;
+    font-family: $font_body;
     @media screen and (min-width: #{$mobile-min}) {
-        font-size: 26px;
+        font-size: 22px;
     }
 }
 .h2 {
+    line-height: 1;
+    font-size: 20px;
+    margin: 0;
+    color: $white;
+    font-weight: $normal;
+    @media screen and (min-width: #{$mobile-min}) {
+        font-size: 40px;
+    }
+}
+.h1 {
+    line-height: 1;
+    margin: 0;
     font-size: 26px;
+    color: $white;
+    font-weight: $normal;
     @media screen and (min-width: #{$mobile-min}) {
         font-size: 60px;
     }

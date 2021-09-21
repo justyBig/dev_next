@@ -1,3 +1,4 @@
+import Card from './Card';
 import Image from 'next/image';
 import React from 'react';
 import clsx from 'clsx';
@@ -8,18 +9,9 @@ const CatCards = () => {
         <section>
             <div className="container">
                 <div className={clsx(styles.cardDeck)}>
-                    <div className={clsx(styles.card)}>
-                        <div>Image</div>
-                        <div>TYPE</div>
-                    </div>
-                    <div className={clsx(styles.card)}>
-                        <div>Image</div>
-                        <div>TYPE</div>
-                    </div>
-                    <div className={clsx(styles.card)}>
-                        <div>Image</div>
-                        <div>TYPE</div>
-                    </div>
+                    <Card image="/WomensCatImg.png" label="Womens" />
+                    <Card image="/MensCatImg.png" label="Mens" />
+                    <Card image="/AccessoriesCatIimg.png" label="Accessories" />
                 </div>
             </div>
         </section>

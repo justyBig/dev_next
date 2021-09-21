@@ -1,0 +1,35 @@
+@import 'main.scss';
+.h1 {
+    color: $black;
+    text-align: center;
+    margin: 29px 0;
+    @media screen and (min-width: #{$mobile-min}) {
+        margin: 45px 0 55px 0;
+    }
+}
+.cardDeck {
+    display: flex;
+    overflow: hidden;
+    margin-bottom: 26px;
+    @media screen and (min-width: #{$mobile-min}) {
+        margin-bottom: 80px;
+        justify-content: center;
+    }
+    .socialCard {
+        flex: 1 1 104px;
+        margin: 0 5px;
+        @media screen and (min-width: #{$mobile-min}) {
+            flex: 0 0 248px;
+        }
+        .imgWrapper {
+            @include responsive-bg-image(248, 248);
+            background-repeat: no-repeat;
+        }
+        &:nth-child(n + 4) {
+            display: none;
+            @media screen and (min-width: #{$mobile-min}) {
+                display: block;
+            }
+        }
+    }
+}

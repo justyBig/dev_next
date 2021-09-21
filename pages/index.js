@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
 
+import Arrivals from '../components/Button/Arrivals';
 import CatCards from '../components/CatCards';
+import Follow from '../components/Follow';
 import Footer from '../components/footer';
 import Head from 'next/head';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import Image from 'next/image';
+import Signup from '../components/Signup';
+import Slide from '../components/Hero/Slide';
 
 const Home = () => {
     const [mobileOpen, setMobileOpen] = useState(false);
@@ -50,6 +54,19 @@ const Home = () => {
                 />
                 <Hero />
                 <CatCards />
+                <Arrivals />
+                <Slide
+                    img="/fullwidthImg.png"
+                    contentTitle={'Our Favorite Tees'}
+                    content={'Everyday tees you need!'}
+                    btnType={'black'}
+                    btnText={'SHOP NOW'}
+                    link="#"
+                    color={'green'}
+                    variation={'fullWidth'}
+                />
+                <Follow />
+                <Signup />
             </main>
 
             <Footer />

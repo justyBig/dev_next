@@ -1,1 +1,100 @@
 @import 'main.scss';
+.footer {
+    padding: 13px 20px 29px;
+    @media screen and (min-width: #{$mobile-min}) {
+        display: flex;
+        justify-content: space-between;
+        padding: 62px 48px 15px;
+    }
+    .footerLinks {
+        padding: 0;
+        li {
+            font-family: $font_heading;
+            font-size: 20px;
+            font-weight: $normal;
+            list-style: none;
+            margin-bottom: 29px;
+            @media screen and (min-width: #{$mobile-min}) {
+                font-size: 22px;
+                line-height: 1.5;
+            }
+            a {
+                text-decoration: none;
+                color: $white;
+            }
+
+            &.hasSub {
+                position: relative;
+                margin-right: 11px;
+                @media screen and (min-width: #{$mobile-min}) {
+                    display: inline-block;
+                    vertical-align: top;
+                    &:first-child {
+                        margin-right: 92px;
+                    }
+                }
+                &:after {
+                    content: '+';
+                    height: 7px;
+                    width: 13px;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    @media screen and (min-width: #{$mobile-min}) {
+                        content: '';
+                    }
+                }
+                &.subMenuActive {
+                    font-weight: 100;
+                    &:after {
+                        content: '-';
+                    }
+                    ul {
+                        padding-top: 16px;
+                        display: block;
+                    }
+                }
+                ul {
+                    display: none;
+                    padding: 0 0 0 0;
+                    list-style: none;
+                    @media screen and (min-width: #{$mobile-min}) {
+                        display: block;
+                    }
+                    li {
+                        font-family: $font_body;
+                        font-size: 12px;
+                        padding: 10px 0;
+                        margin: 0;
+                        @media screen and (min-width: #{$mobile-min}) {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .socialShare {
+        .socialShareTitle {
+            display: block;
+            font-family: $font_heading;
+            margin-bottom: 13px;
+            font-size: 20px;
+            @media screen and (min-width: #{$mobile-min}) {
+                font-size: 22px;
+                line-height: 1.5;
+            }
+        }
+        .socialShareIcons {
+            display: flex;
+            width: 136px;
+            justify-content: space-between;
+            .icon {
+                display: inline;
+                svg {
+                    height: 26px;
+                }
+            }
+        }
+    }
+}

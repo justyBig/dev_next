@@ -10,6 +10,7 @@ const Slide = ({
     btnText,
     link,
     color = 'white',
+    variation = 'slider',
 }) => {
     return (
         <div className={clsx(styles.slideWrapper)}>
@@ -20,16 +21,22 @@ const Slide = ({
                 }}
             ></div>
             <div
-                className={clsx(styles.slideContent, {
-                    [styles.green]: color === 'green',
-                })}
+                className={clsx(
+                    styles.slideContent,
+                    {
+                        [styles.green]: color === 'green',
+                    },
+                    {
+                        [styles.fullWidth]: variation === 'fullWidth',
+                    }
+                )}
             >
                 {contentTitle && (
-                    <h2 className={clsx('h2', styles.h2)}>{contentTitle}</h2>
+                    <h2 className={clsx('h1', styles.h2)}>{contentTitle}</h2>
                 )}
                 {content && <p>{content}</p>}
                 <Button
-                    btnType={btnType}
+                    btnType={variation === 'fullWidth' ? 'green' : btnType}
                     btnText={btnText}
                     styleName={clsx(styles.shopBtn)}
                     link={link}

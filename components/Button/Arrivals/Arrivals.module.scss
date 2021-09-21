@@ -1,0 +1,63 @@
+@import 'main.scss';
+.arrivals {
+    padding: 17px 0 31px 0;
+    .sectionTitle {
+        text-align: center;
+        font-size: 26px;
+        @media screen and (min-width: #{$mobile-min}) {
+            font-size: 60px;
+        }
+    }
+    .slide {
+        .ImgWrapper {
+            @include aspect-ratio(146, 220);
+        }
+        .cardContent {
+            text-align: center;
+            margin-top: 11px;
+            .title {
+                font-size: 16px;
+                font-family: $font-body;
+                margin-top: 5px;
+            }
+            .description {
+                font-size: 12px;
+                font-weight: $light;
+                font-family: $font-body;
+            }
+            .price {
+                font-size: 18px;
+                font-family: $font-heading;
+                font-weight: normal;
+                color: $green;
+            }
+        }
+    }
+    .nextArrow {
+        right: -10px;
+        img {
+            height: 12px;
+            display: block;
+            transform: rotate(180deg);
+            @media screen and (min-width: #{$mobile-min}) {
+                height: 42px;
+            }
+        }
+        &:before {
+            content: '';
+        }
+    }
+    .prevArrow {
+        left: -10px;
+        z-index: 9;
+        img {
+            height: 12px;
+            @media screen and (min-width: #{$mobile-min}) {
+                height: 42px;
+            }
+        }
+        &:before {
+            content: '';
+        }
+    }
+}

@@ -1,0 +1,49 @@
+@import 'main.scss';
+.card {
+    flex: 1 1 163px;
+    margin: 4px;
+    position: relative;
+    .imgWrapper {
+        @include responsive-bg-image(163, 213);
+        background-repeat: no-repeat;
+    }
+    @media screen and (min-width: #{$mobile-min}) {
+        flex: 0 0 calc(33% - 10px);
+        margin: 0 10px;
+        .imgWrapper {
+            @include responsive-bg-image(435, 569);
+            background-repeat: no-repeat;
+        }
+    }
+    &:last-child {
+        flex: 1 1 335px;
+        .imgWrapper {
+            @include responsive-bg-image(335, 203);
+            background-repeat: no-repeat;
+        }
+        @media screen and (min-width: #{$small-mobile-min}) {
+            flex: 0 0 calc(33% - 10px);
+            margin: 0 10px;
+            .imgWrapper {
+                @include responsive-bg-image(435, 569);
+                background-repeat: no-repeat;
+            }
+        }
+    }
+    .label {
+        background: $green;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 42px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 11px 0;
+        // @media screen and (min-width: #{$large-min}) {
+        //     height: 114px;
+        // }
+    }
+}
