@@ -15,7 +15,9 @@ const Slide = ({
     return (
         <div className={clsx(styles.slideWrapper)}>
             <div
-                className={clsx(styles.slide)}
+                className={clsx(styles.slide, {
+                    [styles.fullBleedSlide]: variation != 'slider',
+                })}
                 style={{
                     backgroundImage: 'url(' + `${img}` + ')',
                 }}

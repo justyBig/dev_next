@@ -56,7 +56,7 @@ const Home = () => {
                 <CatCards />
                 <Arrivals />
                 <Slide
-                    img="/fullwidthImg.png"
+                    img="/fullBleed-dskt.png"
                     contentTitle={'Our Favorite Tees'}
                     content={'Everyday tees you need!'}
                     btnType={'black'}

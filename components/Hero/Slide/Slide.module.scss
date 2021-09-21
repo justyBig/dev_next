@@ -7,6 +7,9 @@
         background-position: top right;
         background-size: cover;
         background-repeat: no-repeat;
+        &.fullBleedSlide {
+            background-position: top center;
+        }
     }
     .slideContent {
         padding: 22px 0;
